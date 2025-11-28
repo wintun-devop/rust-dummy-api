@@ -20,3 +20,10 @@ cargo add serde serde_json
 ```
 cargo add uuid uuid-extra
 ```
+### Reference
+```
+https://markaicode.com/rust-web-frameworks-performance-benchmark-2025/
+```
+```
+https://dev.to/leapcell/rust-web-frameworks-compared-actix-vs-axum-vs-rocket-4bad
+```
