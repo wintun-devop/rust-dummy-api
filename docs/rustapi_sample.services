@@ -1,0 +1,16 @@
+[Unit]
+Description=Rust-Dummy-Api
+After=network.target
+
+[Service]
+User=www-data
+ExecStart=/opt/axum/your_binary
+Restart=always
+Environment=RUST_LOG=info
+WorkingDirectory=/opt/axum
+
+[Install]
+WantedBy=multi-user.target
+
+
+
