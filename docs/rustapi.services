@@ -1,0 +1,17 @@
+[Unit]
+Description=Rust-Dummy-Api
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/rust-dummy-api/target/release/rust-dummy-api
+User=root
+Group=root
+Restart=always
+Environment=RUST_LOG=info
+WorkingDirectory=/home/ubuntu/rust-dummy-api/target/release/
+
+[Install]
+WantedBy=multi-user.target
+
+
+
