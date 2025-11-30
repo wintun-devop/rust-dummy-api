@@ -1,6 +1,7 @@
 use axum::{Router};
 mod config;
 mod utils;
+mod handlers;
 use config::config;
 mod routes;
 

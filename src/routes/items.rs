@@ -1,16 +1,15 @@
 use axum::{Router, routing::get};
 
-// use crate::handlers::items_handler::{
-//     list_items, get_item, create_item, update_item, delete_item,
-// };
 
-use crate::utils::response_helpers::health_check;
+use crate::handlers::items_handlers::{
+    list_items,get_item,create_item,update_item,delete_item
+};
 
 pub fn router() -> Router {
     Router::new()
-        .route("/", get(health_check).post(health_check))
+        .route("/", get(list_items).post(create_item))
         .route(
             "/id",
-            get(health_check).put(health_check).delete(health_check)
+            get(get_item).put(update_item).delete(delete_item)
         )
 }
