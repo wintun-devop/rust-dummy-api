@@ -9,7 +9,7 @@ pub fn router() -> Router {
     Router::new()
         .route("/", get(list_items).post(create_item))
         .route(
-            "/id",
+            "/{id}",
             get(get_item).put(update_item).delete(delete_item)
         )
 }
